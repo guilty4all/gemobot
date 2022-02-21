@@ -2,7 +2,7 @@ package main
 
 import (
 	"encoding/json"
-	tba "github.com/go-telegram-bot-api/telegram-bot-api/v5"
+	tba "github.com/go-telegram-bot-api/telegram-bot-api"
 	"io/ioutil"
 	"log"
 	"os"
@@ -30,7 +30,8 @@ func initTelegram() {
 	// this perhaps should be conditional on GetWebhookInfo()
 	// only set webhook if it is not set properly
 	url := baseURL + bot.Token
-	_, err = bot.SetWebhook(tba.NewWebhook(url))
+	//_, err = bot.SetWebhook(tba.NewWebhook(url))
+	bot.ListenForWebhook(url)
 	if err != nil {
 		log.Println(err)
 	}
