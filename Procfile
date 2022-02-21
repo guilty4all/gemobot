@@ -1,1 +1,1 @@
-web : bin/gemobot
+web : bin/main
