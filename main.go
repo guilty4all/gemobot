@@ -26,6 +26,7 @@ func initTelegram() {
 		log.Println(err)
 		return
 	}
+	//gfhfghfghfgh
 
 	// this perhaps should be conditional on GetWebhookInfo()
 	// only set webhook if it is not set properly
