@@ -14,8 +14,8 @@ import (
 
 var (
 	bot      *tba.BotAPI
-	botToken = os.Getenv(Bot_Token)
-	baseURL  = os.Getenv(App_URL)
+	botToken = os.Getenv("Bot_Token")
+	baseURL  = os.Getenv("App_URL")
 )
 
 func initTelegram() {
